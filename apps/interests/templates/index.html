@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Interests</title>
+</head>
+<body>
+	<ol>
+		{% for user in users %}
+			<li><h2><a href="http://localhost:8000/interests/{{user.id}}">{{ user.first_name }} {{ user.last_name }}</a></h2></li>
+			<p>{{ user.interest.name }}</p>
+		{% endfor %}
+	</ol>
+</body>
+</html>
